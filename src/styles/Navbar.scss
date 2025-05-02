@@ -1,0 +1,129 @@
+@use '../styles/variables' as *;
+.navbar {
+  background-color: $accent-pink;
+  color: $white;
+  padding: 1rem 2rem;
+
+  .navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .logo {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: $white;
+  }
+
+  .menu-icon {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: $white;
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    flex: 2;
+    justify-content: flex-end;
+
+    li a {
+      text-decoration: none;
+      color: $white;
+      font-weight: 500;
+      transition: color 0.3s ease;
+
+      &.active {
+        border-bottom: 2px solid $accent-yellow;
+      }
+
+      &:hover {
+        color: $accent-green;
+      }
+    }
+  }
+  .badge {
+    background-color: $primary-color;
+    color: white;
+    font-size: 0.7rem;
+    padding: 2px 6px;
+    border-radius: 50%;
+    margin-left: 6px;
+    font-weight: bold;
+  }
+  
+  // Media Queries
+  @media screen and (max-width: 768px) {
+    .menu-icon {
+      display: block;
+      margin-left: auto; // Pushes it to the right
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: $white;
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  z-index: 1001;
+    }
+    .navbar-container {
+      position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+    }
+    .nav-links {
+      flex-direction: column;
+      width: 100%;
+      margin-top: 1rem;
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: all 0.4s ease-in-out;
+
+      &.active {
+        max-height: 500px;
+        opacity: 1;
+      }
+
+      li {
+        margin: 0.5rem 0;
+      text-align: center;
+      }
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    padding: 0.75rem 1rem;
+
+    .logo {
+      font-size: 1.3rem;
+    }
+
+    .menu-icon {
+      font-size: 1.5rem;
+    }
+
+    .nav-links li a {
+      font-size: 0.95rem;
+    }
+  }
+}
+
+// Global styling (optional, already included)
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f7f7f7;
+  color: #111;
+  transition: all 0.3s ease;
+
+  &.dark {
+    background-color: #121212;
+    color: #eee;
+  }
+}

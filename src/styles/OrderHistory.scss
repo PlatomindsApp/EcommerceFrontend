@@ -1,0 +1,51 @@
+@use './variables' as *;
+
+.order-history-page {
+  padding: 2rem;
+  font-family: 'Poppins', sans-serif;
+  background: #fffafc;
+  text-align: center;
+
+  h2 {
+    color: $primary-color;
+    margin-bottom: 2rem;
+  }
+
+  .order-list {
+    display: grid;
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+
+    .order-card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      text-align: left;
+
+      h3 {
+        color: $accent-pink;
+        margin-bottom: 0.5rem;
+      }
+
+      p {
+        font-weight: 600;
+        margin-bottom: 1rem;
+      }
+
+      ul {
+        padding-left: 1rem;
+        li {
+          list-style: disc;
+          margin-bottom: 0.3rem;
+        }
+      }
+
+      h4 {
+        margin-top: 1rem;
+        color: $accent-green;
+      }
+    }
+  }
+}
