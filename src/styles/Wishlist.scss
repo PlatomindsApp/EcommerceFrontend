@@ -1,8 +1,8 @@
-@use './variables' as *;
+@use "./variables" as *;
 
 .wishlist-page {
   padding: 2rem;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   background-color: #fef6fb;
 
   h2 {
@@ -65,10 +65,14 @@
         }
 
         .add-cart-btn {
-          background: $accent-green;
-          color: $white;
-
+        background-color: $accent-green;
+        padding: 0.8rem 1.6rem;
+        color: $white;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: 700;
           &:hover {
+            color: $white;
             background: $accent-pink;
           }
         }
@@ -78,7 +82,7 @@
           color: $white;
 
           &:hover {
-            background:#F5004F;
+            background: #f5004f;
           }
         }
       }

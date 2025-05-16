@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Link } from 'react-router-dom';
 import '../styles/Cart.scss';
 import floralprintImg from '../assets/floralprintImg.png';

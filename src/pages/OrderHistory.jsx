@@ -1,4 +1,4 @@
-
+import React from "react";
 import "../styles/OrderHistory.scss";
 
 const OrderHistory = () => {
@@ -10,16 +10,14 @@ const OrderHistory = () => {
         { name: "Denim Jacket", quantity: 1 },
         { name: "Floral Dress", quantity: 2 }
       ],
-      total: 3797,
+      total: 3797
     },
     {
       id: "ORD123457",
       date: "2025-04-15",
-      items: [
-        { name: "Cotton Kurti", quantity: 3 }
-      ],
-      total: 2397,
-    },
+      items: [{ name: "Cotton Kurti", quantity: 3 }],
+      total: 2397
+    }
     // Add more orders here
   ];
 
