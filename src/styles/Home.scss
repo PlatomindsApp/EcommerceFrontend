@@ -1,0 +1,245 @@
+@use '../styles/variables' as *;
+
+.home {
+  font-family: 'Poppins', sans-serif;
+  
+  .hero {
+    position: relative;
+    height: 70vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    .hero-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 1;
+    }
+
+    .hero-text {
+      position: relative;
+      z-index: 2;
+      max-width: 700px;
+      padding: 2rem;
+      color: $white;
+
+      h1 {
+        font-size: 2.8rem;
+        margin-bottom: 1rem;
+        color: $accent-pink;
+      }
+
+      p {
+        font-size: 1.3rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .btn {
+        background-color: $accent-green;
+        padding: 0.8rem 1.6rem;
+        color: $white;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: 700;
+
+        &:hover {
+          background-color: $accent-pink;
+          color: $white;
+
+        }
+      }
+    }
+  }
+
+  // Categories Section with Slick Slider
+  .categories {
+    padding: 2rem;
+    background: #fef6fb;
+
+    h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: $accent-pink;
+      font-weight: bolder;
+    }
+
+    .category-slider {
+      
+      .slick-slide {
+        display: flex;
+        justify-content: center;
+        padding: 0 8px;
+      }
+
+      .category-card {
+        background: $white;
+        text-align: center;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15), 0 1px 3px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease;
+        max-width: 270px; /* Adjust the width of the cards */
+        margin: 0 auto; /* Center the cards */
+        &:hover {
+          transform: translateY(-5px);
+        }
+
+        img {
+          width: 90%;
+          height: 200px;
+          object-fit: cover;
+          border-radius: 2rem;
+        }
+
+        h3 {
+          margin: 0.8rem 0;
+          color: $accent-pink;
+        }
+      }
+    }
+  }
+
+  // Featured Products Section with Slick Slider
+  .featured {
+    padding: 2rem;
+
+    h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: $accent-pink;
+    }
+
+    .product-slider {
+      .slick-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      
+      }
+
+      .product-card {
+        background: $white;
+        border-radius: 10px;
+        overflow: hidden;
+        text-align: center;
+        box-shadow: 0 10px 30px rgba(255, 161, 246, 0.2);
+        transition: transform 0.3s ease;
+        max-width: 270px; /* Adjust the width of the cards */
+        margin: 0 auto; /* Center the cards */
+        
+        &:hover {
+          transform: translateY(-5px);
+        }
+
+        img {
+          width: 100%;
+          height: 200px;
+          object-fit: cover;
+        }
+
+        p {
+          padding: 0.8rem;
+          font-weight: 700;
+          color: $primary-color;
+        }
+      }
+    }
+  }
+
+  // Responsive Media Queries
+  @media screen and (max-width: 1024px) {
+    .hero {
+      height: 60vh;
+
+      .hero-text {
+        h1 {
+          font-size: 2.4rem;
+        }
+
+        p {
+          font-size: 1.1rem;
+        }
+      }
+    }
+
+    .category-slider,
+    .product-slider {
+      .slick-slide {
+        padding: 0 10px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .hero {
+      height: 55vh;
+
+      .hero-text {
+        padding: 1.5rem;
+
+        h1 {
+          font-size: 2rem;
+        }
+
+        p {
+          font-size: 1rem;
+        }
+
+        .btn {
+          padding: 0.6rem 1.2rem;
+          font-size: 0.95rem;
+        }
+      }
+    }
+
+    .category-slider,
+    .product-slider {
+      .slick-slide {
+        padding: 0 10px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .hero {
+      height: 50vh;
+    }
+
+    .hero-text {
+      padding: 1rem;
+
+      h1 {
+        font-size: 1.7rem;
+      }
+
+      p {
+        font-size: 0.95rem;
+      }
+
+      .btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+      }
+    }
+
+    .category-card img,
+    .product-card img {
+      height: 160px;
+    }
+  }
+}

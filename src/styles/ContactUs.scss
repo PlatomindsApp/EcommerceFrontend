@@ -1,0 +1,124 @@
+@use './variables' as *;
+
+.contact-page {
+  padding: 2rem;
+  background-color: #fff0fb;
+  min-height: 100vh;
+
+  h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: $accent-pink;
+    margin-bottom: 2rem;
+  }
+
+  .contact-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+
+    .contact-form,
+    .contact-info {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      flex: 1 1 45%;
+      min-width: 280px;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+
+      label {
+        display: flex;
+        flex-direction: column;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        color: $primary-color;
+
+        input,
+        textarea {
+          margin-top: 0.5rem;
+          padding: 0.8rem;
+          border: 1px solid #ccc;
+          border-radius: 8px;
+          font-size: 1rem;
+        }
+
+        textarea {
+          resize: vertical;
+        }
+      }
+
+      button {
+        margin-top: 1rem;
+        padding: 0.8rem;
+        background-color: $accent-green;
+        color: white;
+        font-weight: bold;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: $accent-pink;
+        }
+      }
+    }
+
+    .contact-info {
+      h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        color: $primary-color;
+      }
+
+      p {
+        font-size: 1rem;
+        margin: 0.8rem 0;
+        font-weight: 600;
+        color: #444;
+
+        strong {
+          color: $accent-pink;
+        }
+      }
+    }
+  }
+
+  // Responsive breakpoints
+  @media (max-width: 768px) {
+    .contact-content {
+      flex-direction: column;
+      align-items: center;
+
+      .contact-form,
+      .contact-info {
+        width: 100%;
+      }
+    }
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    .contact-info h3 {
+      font-size: 1.3rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .contact-form label input,
+    .contact-form label textarea {
+      font-size: 0.95rem;
+    }
+
+    .contact-form button {
+      font-size: 1rem;
+    }
+  }
+}

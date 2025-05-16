@@ -1,0 +1,87 @@
+@use '../styles/variables' as *;
+
+.footer {
+    background-color:#f8ff9537;
+  color: $accent-pink;
+  padding: 4rem 2rem;
+  text-align: center;
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    
+    .footer-section {
+      flex: 1;
+      padding: 0 1rem;
+
+      h3 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        color: $accent-pink;
+        font-weight: 700;
+      }
+
+      p {
+        font-weight: 700;
+        font-size: 1rem;
+        line-height: 1.5;
+      }
+
+      ul {
+        font-weight: 700;
+        list-style: none;
+        padding: 0;
+
+        li {
+          margin-bottom: 0.5rem;
+          font-weight: 700;
+          a {
+            color: $accent-pink;
+            text-decoration: none;
+            transition: color 0.3s ease;
+
+            &:hover {
+              color: $accent-green;
+            }
+          }
+        }
+      }
+
+      .social {
+        a {
+          margin-right: 1rem;
+          font-size: 1.5rem;
+          color:$accent-pink;
+          transition: color 0.3s ease;
+
+          &:hover {
+            color: $accent-pink;
+          }
+        }
+      }
+    }
+  }
+
+  .footer-bottom {
+    font-weight: 700;
+    font-size: 1rem;
+    color:  $accent-pink;
+    margin-top: 2rem;
+    border-top: 1px solid $accent-pink;
+    padding-top: 1rem;
+  }
+
+  // Responsive styling for small screens
+  @media screen and (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+      text-align: center;
+
+      .footer-section {
+        margin-bottom: 2rem;
+        padding: 0;
+      }
+    }
+  }
+}

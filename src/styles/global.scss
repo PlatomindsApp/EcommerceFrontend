@@ -1,0 +1,26 @@
+$primary-color: #BC7AF9;  // Soft Purple
+$accent-pink: #FFA1F5;    // Bright Pink
+$accent-yellow: #F8FF95;  // Light Yellow
+$accent-green: #A6FF96;   // Light Green
+$white: #ffffff;
+$dark: #1a1a1a;
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+  }
+  
+  .page-content {
+    padding: 2rem;
+  
+    @media screen and (max-width: 768px) {
+      padding: 1rem;
+    }
+  
+    @media screen and (max-width: 480px) {
+      padding: 0.5rem;
+    }
+  }
+  

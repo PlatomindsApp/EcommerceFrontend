@@ -1,0 +1,83 @@
+@use '../styles/variables' as *;
+
+.checkout-page {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+  font-family: 'Poppins', sans-serif;
+
+  h2 {
+    text-align: center;
+    color: $primary-color;
+    margin-bottom: 2rem;
+    font-weight: bolder;
+  }
+
+  .checkout-form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    .form-section {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+      h3 {
+        color: $accent-pink;
+        margin-bottom: 1rem;
+      }
+
+      input[type="text"] {
+        width: 100%;
+        padding: 0.8rem;
+        margin: 0.5rem 0;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        font-size: 1rem;
+      }
+
+      label {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-top: 0.8rem;
+        font-weight: 600;
+      }
+
+      input[type="radio"] {
+        transform: scale(1.2);
+      }
+    }
+
+    .place-order-btn {
+      background: $accent-green;
+      color: $white;
+      padding: 1rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.2rem;
+      font-weight: 800;
+      cursor: pointer;
+      transition: background 0.3s;
+
+      &:hover {
+        background: $accent-pink;
+      }
+    }
+  }
+
+  // Responsive
+  @media (max-width: 600px) {
+    padding: 1rem;
+
+    .checkout-form {
+      gap: 1.5rem;
+    }
+
+    .form-section {
+      padding: 1rem;
+    }
+  }
+}
